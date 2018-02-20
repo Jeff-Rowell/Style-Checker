@@ -1,0 +1,109 @@
+
+/*
+  Jeff Rowell
+  Line Length
+  This is a test file with long Identifier name errors,
+  on line 14, and line 54
+*/
+
+import java.util.Objects;
+
+public class GameTestClass 
+{
+
+   private final int THIS_NAME_IS_WAY_TOO_LONG_YOU_SHOULD_JUST_NAME_IT_SOMETHING_ELSE = 0;
+   private final String GAME_ID;
+   private final String HOME_TEAM_ID; 
+   private final String GUEST_TEAM_ID; 
+   private final String GAME_DATE;
+   private final String HOME_TEAM_SCORE;
+   private final String GUEST_TEAM_SCORE;
+
+   public GameTestClass(String GAME_ID, String HOME_TEAM_ID, 
+               String GUEST_TEAM_ID, String GAME_DATE, String HOME_TEAM_SCORE, 
+               String GUEST_TEAM_SCORE) 
+   {
+      this.GAME_ID = GAME_ID; 
+      this.HOME_TEAM_ID = HOME_TEAM_ID;
+      this.GUEST_TEAM_ID = GUEST_TEAM_ID;
+      this.GAME_DATE = GAME_DATE;
+      this.HOME_TEAM_SCORE = HOME_TEAM_SCORE;
+      this.GUEST_TEAM_SCORE = GUEST_TEAM_SCORE;
+   }
+        
+   public String GetGameId() 
+   {  
+      int num = 90 + 1;
+      for (int i = 0; i <= 10; i++)
+      {
+         System.out.println("Hello motto");
+      }
+      return GAME_ID;
+   } 
+  
+   public String getHomeTeamId() 
+   { 
+      return HOME_TEAM_ID;
+   }
+
+   public String getGuestTeamId()
+   {     
+      return GUEST_TEAM_ID;
+   }
+    
+   public String returnToMeTheGameDateThatIsWithinSometimeBetweenJanuary1stAndMay31st()
+   {  
+      return GAME_DATE;
+   }
+  
+   public String getHomeTeamScore()
+   {
+      return HOME_TEAM_SCORE;
+   }
+    
+   public String getGuestTeamScore() 
+   {        
+      return GUEST_TEAM_SCORE;  
+   }
+
+   @Override
+   public boolean equals(Object obj)
+   {
+      if (obj == null)
+      {
+         return false;
+      }
+      if (getClass() != obj.getClass())
+      {
+         return false;
+      }
+
+      final GameTestClass other = (GameTestClass) obj;
+
+      if (!Objects.equals(this.GAME_ID, other.GAME_ID)) 
+      {
+         return false; 
+      }
+      if (!Objects.equals(this.HOME_TEAM_ID, other.HOME_TEAM_ID))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.GUEST_TEAM_ID, other.GUEST_TEAM_ID))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.GAME_DATE, other.GAME_DATE))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.HOME_TEAM_SCORE, other.HOME_TEAM_SCORE))
+      {
+         return false;
+      }
+      if (!Objects.equals(this.GUEST_TEAM_SCORE, other.GUEST_TEAM_SCORE))
+      {
+         return false;
+      }
+      return true;
+   }
+}

@@ -1,0 +1,32 @@
+/*
+Zac Champion
+Optional Curly Braces
+Test for optional curly braces
+Errors on lines:
+19, 20, 21 - if statement missing curly braces
+26 - while loop missing curly braces
+29, 30 - Checking with a nested for loop which has only one statement in it.
+*/
+
+package tests;
+
+public class zachary_opt_braces {
+   int g = 0;
+   public static void main(String[] args) throws Exception
+   {
+      int i = 0;
+      int flag = 9;
+
+      if (1 < 3)
+         System.out.println("Yes, 1 is less than 3... I hadn't thought of that. That's a silly condition.");
+      else
+         System.out.println("Well, something's sure gone wrong if 1 is somehow not less than 3!");
+
+      while (i < flag)
+         System.out.println("i = " + ++i);
+
+      for (int y = 0; y <= 8; y++)
+         for (int x = 0; x <= 8; x++)
+            System.out.println(x + " * " + y + " = " + x * y);
+   }
+}
